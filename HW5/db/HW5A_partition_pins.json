@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hamming_weight[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hamming_weight[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hamming_weight[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hamming_weight[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oneCounter[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oneCounter[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oneCounter[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oneCounter[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oneCounter[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oneCounter[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oneCounter[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oneCounter[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input[7]",
+					"strict" : false
+				},
+				{
+					"name" : "input[6]",
+					"strict" : false
+				},
+				{
+					"name" : "input[4]",
+					"strict" : false
+				},
+				{
+					"name" : "input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

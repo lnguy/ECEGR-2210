@@ -1,0 +1,165 @@
+--Seven-segment decoder
+
+--This is the decoder VDHL code for running a seven-segment display
+--Author: Ly Nguyen
+--Date: January 11, 2022
+
+--Declaring IEEE library to be able to call a standard logic vector later
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+--Initializing the entity portion
+ENTITY two_seven_seg IS
+	PORT( input: IN integer range 0 to 63; --declares the input for the seven segment display as an integer
+			seg1, seg2: OUT std_logic_vector(6 DOWNTO 0) ); --declares the output for the seven segment display as 7 bits: one bit for each segment on the display
+end; --declares that the entity portion is done
+
+--Initializing the architecture portion
+ARCHITECTURE encoding OF two_seven_seg IS
+	SIGNAL first_digit: std_logic_vector(7 DOWNTO 0); --declares SIGNAL architecture called "internal", 8 bits allow for the hex to read in two sections of 4 bits
+	SIGNAL second_digit: std_logic_vector(7 DOWNTO 0);
+	begin
+		WITH input SELECT --declares what hex value is assigned to what value to display the hex value assignment to the seven segment display
+			first_digit <= x"40" WHEN 00,
+								x"40" WHEN 10,
+								x"40" WHEN 20,
+								x"40" WHEN 30,
+								x"40" WHEN 40,
+								x"40" WHEN 50,
+								
+								x"79" WHEN 01,
+								x"79" WHEN 11,
+								x"79" WHEN 21,
+								x"79" WHEN 31,
+								x"79" WHEN 41,
+								x"79" WHEN 51,
+								
+								x"24" WHEN 02,
+								x"24" WHEN 12,
+								x"24" WHEN 22,
+								x"24" WHEN 32,
+								x"24" WHEN 42,
+								x"24" WHEN 52,
+								
+								x"30" WHEN 03,
+								x"30" WHEN 13,
+								x"30" WHEN 23,
+								x"30" WHEN 33,
+								x"30" WHEN 43,
+								x"30" WHEN 53,
+								
+								x"19" WHEN 04,
+								x"19" WHEN 14,
+								x"19" WHEN 24,
+								x"19" WHEN 34,
+								x"19" WHEN 44,
+								x"19" WHEN 54,
+								
+								x"12" WHEN 05,
+								x"12" WHEN 15,
+								x"12" WHEN 25,
+								x"12" WHEN 35,
+								x"12" WHEN 45,
+								x"12" WHEN 55,
+								
+								x"02" WHEN 06,
+								x"02" WHEN 16,
+								x"02" WHEN 26,
+								x"02" WHEN 36,
+								x"02" WHEN 46,
+								x"02" WHEN 56,
+								
+								x"78" WHEN 07,
+								x"78" WHEN 17,
+								x"78" WHEN 27,
+								x"78" WHEN 37,
+								x"78" WHEN 47,
+								x"78" WHEN 57,
+								
+								x"00" WHEN 08,
+								x"00" WHEN 18,
+								x"00" WHEN 28,
+								x"00" WHEN 38,
+								x"00" WHEN 48,
+								x"00" WHEN 58,
+								
+								x"18" WHEN 09,
+								x"18" WHEN 19,
+								x"18" WHEN 29,
+								x"18" WHEN 39,
+								x"18" WHEN 49,
+								x"18" WHEN 59,
+								x"09" WHEN OTHERS; --segments 0 and 3 are off to make an H or X (however you look at it) pattern.
+								
+		WITH input SELECT
+			second_digit <= x"40" WHEN 00,
+								 x"40" WHEN 01,
+								 x"40" WHEN 02,
+								 x"40" WHEN 03,
+								 x"40" WHEN 04,
+								 x"40" WHEN 05,
+								 x"40" WHEN 06,
+								 x"40" WHEN 07,
+								 x"40" WHEN 08,
+								 x"40" WHEN 09,
+								 
+								 x"79" WHEN 10,
+								 x"79" WHEN 11,
+								 x"79" WHEN 12,
+								 x"79" WHEN 13,
+								 x"79" WHEN 14,
+								 x"79" WHEN 15,
+								 x"79" WHEN 16,
+								 x"79" WHEN 17,
+								 x"79" WHEN 18,
+								 x"79" WHEN 19,
+								 
+								 x"24" WHEN 20,
+								 x"24" WHEN 21,
+								 x"24" WHEN 22,
+								 x"24" WHEN 23,
+								 x"24" WHEN 24,
+								 x"24" WHEN 25,
+								 x"24" WHEN 26,
+								 x"24" WHEN 27,
+								 x"24" WHEN 28,
+								 x"24" WHEN 29,
+								 
+								 x"30" WHEN 30,
+								 x"30" WHEN 31,
+								 x"30" WHEN 32,
+								 x"30" WHEN 33,
+								 x"30" WHEN 34,
+								 x"30" WHEN 35,
+								 x"30" WHEN 36,
+								 x"30" WHEN 37,
+								 x"30" WHEN 38,
+								 x"30" WHEN 39,
+								 
+								 x"19" WHEN 40,
+								 x"19" WHEN 41,
+								 x"19" WHEN 42,
+								 x"19" WHEN 43,
+								 x"19" WHEN 44,
+								 x"19" WHEN 45,
+								 x"19" WHEN 46,
+								 x"19" WHEN 47,
+								 x"19" WHEN 48,
+								 x"19" WHEN 49,
+								 
+								 x"12" WHEN 50,
+								 x"12" WHEN 51,
+								 x"12" WHEN 52,
+								 x"12" WHEN 53,
+								 x"12" WHEN 54,
+								 x"12" WHEN 55,
+								 x"12" WHEN 56,
+								 x"12" WHEN 57,
+								 x"12" WHEN 58,
+								 x"12" WHEN 59,
+								 
+								 x"09" WHEN OTHERS;
+			
+		seg1 <= first_digit(6 DOWNTO 0);
+		seg2 <= second_digit(6 DOWNTO 0);
+end; --declares the end of the architecture portion

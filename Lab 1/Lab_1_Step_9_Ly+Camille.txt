@@ -1,0 +1,11 @@
+How was the decoder synthesized? 
+Out of seven multiplexers, each for a segment on the display.
+
+Was this what you expected? 
+No.
+
+Can you make sense of what is shown?
+Yes, each multiplexer is for one segment on the display. Each switch is one select line on the 
+multiplexer to where the multiplexer takes signal data from the VDHL code to determine whether
+the segment is on or off. There are 16 states possible in the muxes because there four select
+lines, so 2^4 states.

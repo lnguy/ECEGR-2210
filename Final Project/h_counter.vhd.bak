@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+----------------------------------------------
+ENTITY hh_counter IS
+	PORT (clk, toggle: IN std_logic;
+			s_count: IN INTEGER RANGE 0 TO 9;
+			mm_count: IN INTEGER RANGE 0 TO 5;
+			m_count: IN INTEGER RANGE 0 TO 9;
+			hh_count: IN INTEGER RANGE 0 TO 5;
+			h_count: IN INTEGER RANGE 0 TO 9;
+			count: OUT INTEGER RANGE 0 TO 3);
+END ENTITY;
+----------------------------------------------
+ARCHITECTURE hh_counter OF hh_counter IS
+SIGNAL temp: INTEGER RANGE 0 TO 4;
+BEGIN
+	PROCESS(clk, toggle, s_count, mm_count)
+	BEGIN
+		IF (toggle = '0') THEN
+			IF (clk'EVENt AND clk='1') THEN
+				IF (s_count = 9) THEN
+					IF (mm_count = 5) THEN
+						IF (m_count = 9) THEN
+							IF (hh_count = 5) THEN
+								IF (h_count = 4 AND temp = 2) THEN
+									temp <= 0;
+								ELSIF(h_count = 9) THEN
+									temp <= temp + 1;
+								END IF;
+							END IF;
+						END IF;
+					END IF;
+				END IF;
+			END IF;
+		END IF;
+	END PROCESS;
+	count <= temp;
+END ARCHITECTURE;
+----------------------------------------------

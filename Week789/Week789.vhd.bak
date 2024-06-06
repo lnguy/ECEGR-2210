@@ -1,0 +1,54 @@
+-- FSM template in VHDL --
+-- based on Pedroni, pp. 279--280
+-- author:
+-------------------------------- 
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+--------------------------------
+ENTITY Week789 IS
+  PORT ( clk, rst, sel: IN std_logic;
+         output: OUT std_logic_vector (7 DOWNTO 0));
+END <entity_name>;
+--------------------------------
+ARCHITECTURE FSM OF Week789 IS
+  TYPE state IS (s0, s1, s2, s3, s4, s5, s6, s7);              -- An enumerated type (called "state") is created.
+  SIGNAL prState, nxState: state;            -- The present and next states are of type 'state'.
+  ATTRIBUTE ENUM_ENCODING: STRING;           -- optional attribute for choice: sequential/one-hot/Gray/Johnson
+  ATTRIBUTE ENUM_ENCODING OF state: TYPE IS "sequential";
+BEGIN
+  -------- LOWER, SEQUENTIAL, SECTION --------
+  PROCESS (clk, rst)
+  BEGIN
+    IF (rst='1') THEN
+      prState <= A;
+    ELSIF (clk'EVENT AND clk='1') THEN
+      prState <= nxState;
+    END IF;
+  END PROCESS;
+  -------- UPPER, COMBINATIONAL, BLOCK --------
+  PROCESS (prState, input)                       -- no need for clk
+  BEGIN                                          -- Always specify all outputs and each next state, using don't-cares if necessary.
+    CASE prState IS                              -- This section can also be written with concurrent statements.
+      WHEN s0 =>                                  -- "for the case when the present state is A..."
+        nxState =< s1
+        IF (sel = 1) THEN
+          output <= "00000000";
+        ELSIF(sel = 0) THEN
+          output <= "00000000";
+		  ELSE
+			 output <= "ZZZZZZZZ";
+        END IF;
+--
+      WHEN B =>
+        output <= <anotherValue>;
+        IF (input = <someOtherValue>) THEN
+          nxState <= C;
+          <...>
+        ELSE
+          nxState <= B;
+        END IF;
+--
+      WHEN ...
+    END CASE;
+  END PROCESS;
+END FSM;

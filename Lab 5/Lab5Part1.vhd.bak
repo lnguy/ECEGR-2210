@@ -1,0 +1,35 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+ENTITY Lab5Part1 IS
+	PORT (d, clk, rst: IN BIT;
+			q: OUT BIT);
+END ENTITY;
+--------------Code 1--------------
+--ARCHITECTURE circuit OF Lab5Part1 IS
+--BEGIN
+--	PROCESS (d, clk, rst)
+--	BEGIN
+--		IF (rst='1') THEN
+--			q <= '0';
+--		ELSIF (clk='1') THEN
+--			q <= d;
+--		END IF;
+--	END PROCESS;
+--END ARCHITECTURE;
+----------------------------------
+
+--------------Code 3--------------
+ARCHITECTURE circuit OF Lab5Part1 IS
+BEGIN
+	PROCESS (clk)
+	BEGIN
+		IF (clk='1') THEN
+			IF (rst='1') THEN
+				q <= '0';
+			ELSE
+				q <= d;
+			END IF;
+		END IF;
+	END PROCESS;
+END ARCHITECTURE;

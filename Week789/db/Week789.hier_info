@@ -1,0 +1,34 @@
+|Week789
+clk => prState[0].CLK
+clk => prState[1].CLK
+clk => prState[2].CLK
+clk => prState[3].CLK
+rst => prState[0].ACLR
+rst => prState[1].ACLR
+rst => prState[2].ACLR
+rst => prState[3].ACLR
+nickel_in => nxState.OUTPUTSELECT
+nickel_in => nxState.OUTPUTSELECT
+nickel_in => nxState.OUTPUTSELECT
+nickel_in => nxState.OUTPUTSELECT
+nickel_in => nxState.OUTPUTSELECT
+nickel_in => nxState.OUTPUTSELECT
+nickel_in => nxState.OUTPUTSELECT
+nickel_in => nxState.OUTPUTSELECT
+nickel_in => nxState.OUTPUTSELECT
+dime_in => nxState.DATAA
+dime_in => nxState.OUTPUTSELECT
+dime_in => nxState.OUTPUTSELECT
+dime_in => nxState.OUTPUTSELECT
+dime_in => nxState.OUTPUTSELECT
+dime_in => nxState.DATAA
+dime_in => nxState.DATAA
+quarter_in => nxState.DATAA
+quarter_in => nxState.DATAA
+quarter_in => nxState.DATAA
+quarter_in => nxState.DATAA
+candy_out <= prState[2].DB_MAX_OUTPUT_PORT_TYPE
+nickel_out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+dime_out <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+

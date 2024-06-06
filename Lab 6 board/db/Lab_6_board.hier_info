@@ -1,0 +1,17 @@
+|Lab_6_board
+reset => pr_state~3.DATAIN
+clk => pr_state~1.DATAIN
+q2[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+q2[1] <= <GND>
+q2[2] <= <GND>
+q2[3] <= <GND>
+q1[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+q1[1] <= <GND>
+q1[2] <= <GND>
+q1[3] <= <GND>
+q0[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+q0[1] <= <GND>
+q0[2] <= <GND>
+q0[3] <= <GND>
+
+

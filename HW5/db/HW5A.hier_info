@@ -1,0 +1,47 @@
+|HW5A
+input[0] => internal[1][3].OUTPUTSELECT
+input[0] => internal[1][2].OUTPUTSELECT
+input[0] => internal[1][1].OUTPUTSELECT
+input[0] => internal[1][0].OUTPUTSELECT
+input[1] => internal[2][3].OUTPUTSELECT
+input[1] => internal[2][2].OUTPUTSELECT
+input[1] => internal[2][1].OUTPUTSELECT
+input[1] => internal[2][0].OUTPUTSELECT
+input[2] => internal[3][3].OUTPUTSELECT
+input[2] => internal[3][2].OUTPUTSELECT
+input[2] => internal[3][1].OUTPUTSELECT
+input[2] => internal[3][0].OUTPUTSELECT
+input[3] => internal[4][3].OUTPUTSELECT
+input[3] => internal[4][2].OUTPUTSELECT
+input[3] => internal[4][1].OUTPUTSELECT
+input[3] => internal[4][0].OUTPUTSELECT
+input[4] => internal[5][3].OUTPUTSELECT
+input[4] => internal[5][2].OUTPUTSELECT
+input[4] => internal[5][1].OUTPUTSELECT
+input[4] => internal[5][0].OUTPUTSELECT
+input[5] => internal[6][3].OUTPUTSELECT
+input[5] => internal[6][2].OUTPUTSELECT
+input[5] => internal[6][1].OUTPUTSELECT
+input[5] => internal[6][0].OUTPUTSELECT
+input[6] => internal[7][3].OUTPUTSELECT
+input[6] => internal[7][2].OUTPUTSELECT
+input[6] => internal[7][1].OUTPUTSELECT
+input[6] => internal[7][0].OUTPUTSELECT
+input[7] => internal.OUTPUTSELECT
+input[7] => internal.OUTPUTSELECT
+input[7] => internal.OUTPUTSELECT
+input[7] => internal.OUTPUTSELECT
+hamming_weight[0] <= internal.DB_MAX_OUTPUT_PORT_TYPE
+hamming_weight[1] <= internal.DB_MAX_OUTPUT_PORT_TYPE
+hamming_weight[2] <= internal.DB_MAX_OUTPUT_PORT_TYPE
+hamming_weight[3] <= internal.DB_MAX_OUTPUT_PORT_TYPE
+oneCounter[0] <= LessThan7.DB_MAX_OUTPUT_PORT_TYPE
+oneCounter[1] <= LessThan6.DB_MAX_OUTPUT_PORT_TYPE
+oneCounter[2] <= LessThan5.DB_MAX_OUTPUT_PORT_TYPE
+oneCounter[3] <= LessThan4.DB_MAX_OUTPUT_PORT_TYPE
+oneCounter[4] <= LessThan3.DB_MAX_OUTPUT_PORT_TYPE
+oneCounter[5] <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
+oneCounter[6] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+oneCounter[7] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

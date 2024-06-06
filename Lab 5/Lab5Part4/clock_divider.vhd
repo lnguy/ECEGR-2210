@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+ENTITY clock_divider IS
+  GENERIC(n: INTEGER := 20000000);
+  PORT(clk_in: IN STD_LOGIC;
+		clk_out: OUT STD_LOGIC);
+END;
+
+ARCHITECTURE RTL OF clock_divider IS
+  SIGNAL count: integer range 0 to n+1;
+  SIGNAL internal: STD_LOGIC:= '0';
+BEGIN
+  PROCESS (clk_in)
+  BEGIN
+    IF (clk_in'event AND clk_in = '1') THEN
+	   count <= count + 1;
+		IF (count = n) THEN
+		  internal <= not internal;
+		  clk_out <= internal;
+		  count <= 0;
+		END IF;
+    END IF;
+  END PROCESS;
+END;

@@ -1,0 +1,91 @@
+|main_entity
+clock_in => clock_divider:ClkDiv.clk_in
+segment[0] <= sevenseg_disp:SvnSeg.output[0]
+segment[1] <= sevenseg_disp:SvnSeg.output[1]
+segment[2] <= sevenseg_disp:SvnSeg.output[2]
+segment[3] <= sevenseg_disp:SvnSeg.output[3]
+segment[4] <= sevenseg_disp:SvnSeg.output[4]
+segment[5] <= sevenseg_disp:SvnSeg.output[5]
+segment[6] <= sevenseg_disp:SvnSeg.output[6]
+
+
+|main_entity|clock_divider:ClkDiv
+clk_in => clk_out~reg0.CLK
+clk_in => internal.CLK
+clk_in => count[0].CLK
+clk_in => count[1].CLK
+clk_in => count[2].CLK
+clk_in => count[3].CLK
+clk_in => count[4].CLK
+clk_in => count[5].CLK
+clk_in => count[6].CLK
+clk_in => count[7].CLK
+clk_in => count[8].CLK
+clk_in => count[9].CLK
+clk_in => count[10].CLK
+clk_in => count[11].CLK
+clk_in => count[12].CLK
+clk_in => count[13].CLK
+clk_in => count[14].CLK
+clk_in => count[15].CLK
+clk_in => count[16].CLK
+clk_in => count[17].CLK
+clk_in => count[18].CLK
+clk_in => count[19].CLK
+clk_in => count[20].CLK
+clk_in => count[21].CLK
+clk_in => count[22].CLK
+clk_in => count[23].CLK
+clk_in => count[24].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_entity|counter:Count
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => temp[3].CLK
+count[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main_entity|sevenseg_disp:SvnSeg
+input[0] => Mux0.IN19
+input[0] => Mux1.IN19
+input[0] => Mux2.IN19
+input[0] => Mux3.IN19
+input[0] => Mux4.IN19
+input[0] => Mux5.IN19
+input[0] => Mux6.IN19
+input[1] => Mux0.IN18
+input[1] => Mux1.IN18
+input[1] => Mux2.IN18
+input[1] => Mux3.IN18
+input[1] => Mux4.IN18
+input[1] => Mux5.IN18
+input[1] => Mux6.IN18
+input[2] => Mux0.IN17
+input[2] => Mux1.IN17
+input[2] => Mux2.IN17
+input[2] => Mux3.IN17
+input[2] => Mux4.IN17
+input[2] => Mux5.IN17
+input[2] => Mux6.IN17
+input[3] => Mux0.IN16
+input[3] => Mux1.IN16
+input[3] => Mux2.IN16
+input[3] => Mux3.IN16
+input[3] => Mux4.IN16
+input[3] => Mux5.IN16
+input[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,188 @@
+|Lab_6_board_block
+out2_0 <= out2[0].DB_MAX_OUTPUT_PORT_TYPE
+reset => Lab_6_board:inst.reset
+clock => clock_divider:inst2.clk_in
+out2_1 <= out2[1].DB_MAX_OUTPUT_PORT_TYPE
+out2_2 <= out2[2].DB_MAX_OUTPUT_PORT_TYPE
+out2_3 <= out2[3].DB_MAX_OUTPUT_PORT_TYPE
+out2_4 <= out2[4].DB_MAX_OUTPUT_PORT_TYPE
+out2_5 <= out2[5].DB_MAX_OUTPUT_PORT_TYPE
+out2_6 <= out2[6].DB_MAX_OUTPUT_PORT_TYPE
+out1_0 <= out1[0].DB_MAX_OUTPUT_PORT_TYPE
+out1_1 <= out1[1].DB_MAX_OUTPUT_PORT_TYPE
+out1_2 <= out1[2].DB_MAX_OUTPUT_PORT_TYPE
+out1_3 <= out1[3].DB_MAX_OUTPUT_PORT_TYPE
+out1_4 <= out1[4].DB_MAX_OUTPUT_PORT_TYPE
+out1_5 <= out1[5].DB_MAX_OUTPUT_PORT_TYPE
+out1_6 <= out1[6].DB_MAX_OUTPUT_PORT_TYPE
+out0_0 <= out0[0].DB_MAX_OUTPUT_PORT_TYPE
+out0_1 <= out0[1].DB_MAX_OUTPUT_PORT_TYPE
+out0_2 <= out0[2].DB_MAX_OUTPUT_PORT_TYPE
+out0_3 <= out0[3].DB_MAX_OUTPUT_PORT_TYPE
+out0_4 <= out0[4].DB_MAX_OUTPUT_PORT_TYPE
+out0_5 <= out0[5].DB_MAX_OUTPUT_PORT_TYPE
+out0_6 <= out0[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab_6_board_block|sevenseg_disp:inst3
+input[0] => Mux0.IN19
+input[0] => Mux1.IN19
+input[0] => Mux2.IN19
+input[0] => Mux3.IN19
+input[0] => Mux4.IN19
+input[0] => Mux5.IN19
+input[0] => Mux6.IN19
+input[1] => Mux0.IN18
+input[1] => Mux1.IN18
+input[1] => Mux2.IN18
+input[1] => Mux3.IN18
+input[1] => Mux4.IN18
+input[1] => Mux5.IN18
+input[1] => Mux6.IN18
+input[2] => Mux0.IN17
+input[2] => Mux1.IN17
+input[2] => Mux2.IN17
+input[2] => Mux3.IN17
+input[2] => Mux4.IN17
+input[2] => Mux5.IN17
+input[2] => Mux6.IN17
+input[3] => Mux0.IN16
+input[3] => Mux1.IN16
+input[3] => Mux2.IN16
+input[3] => Mux3.IN16
+input[3] => Mux4.IN16
+input[3] => Mux5.IN16
+input[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab_6_board_block|Lab_6_board:inst
+reset => pr_state~3.DATAIN
+clk => pr_state~1.DATAIN
+q2[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+q2[1] <= <GND>
+q2[2] <= <GND>
+q2[3] <= <GND>
+q1[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+q1[1] <= <GND>
+q1[2] <= <GND>
+q1[3] <= <GND>
+q0[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+q0[1] <= <GND>
+q0[2] <= <GND>
+q0[3] <= <GND>
+
+
+|Lab_6_board_block|clock_divider:inst2
+clk_in => clk_out~reg0.CLK
+clk_in => internal.CLK
+clk_in => count[0].CLK
+clk_in => count[1].CLK
+clk_in => count[2].CLK
+clk_in => count[3].CLK
+clk_in => count[4].CLK
+clk_in => count[5].CLK
+clk_in => count[6].CLK
+clk_in => count[7].CLK
+clk_in => count[8].CLK
+clk_in => count[9].CLK
+clk_in => count[10].CLK
+clk_in => count[11].CLK
+clk_in => count[12].CLK
+clk_in => count[13].CLK
+clk_in => count[14].CLK
+clk_in => count[15].CLK
+clk_in => count[16].CLK
+clk_in => count[17].CLK
+clk_in => count[18].CLK
+clk_in => count[19].CLK
+clk_in => count[20].CLK
+clk_in => count[21].CLK
+clk_in => count[22].CLK
+clk_in => count[23].CLK
+clk_in => count[24].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab_6_board_block|sevenseg_disp:inst6
+input[0] => Mux0.IN19
+input[0] => Mux1.IN19
+input[0] => Mux2.IN19
+input[0] => Mux3.IN19
+input[0] => Mux4.IN19
+input[0] => Mux5.IN19
+input[0] => Mux6.IN19
+input[1] => Mux0.IN18
+input[1] => Mux1.IN18
+input[1] => Mux2.IN18
+input[1] => Mux3.IN18
+input[1] => Mux4.IN18
+input[1] => Mux5.IN18
+input[1] => Mux6.IN18
+input[2] => Mux0.IN17
+input[2] => Mux1.IN17
+input[2] => Mux2.IN17
+input[2] => Mux3.IN17
+input[2] => Mux4.IN17
+input[2] => Mux5.IN17
+input[2] => Mux6.IN17
+input[3] => Mux0.IN16
+input[3] => Mux1.IN16
+input[3] => Mux2.IN16
+input[3] => Mux3.IN16
+input[3] => Mux4.IN16
+input[3] => Mux5.IN16
+input[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab_6_board_block|sevenseg_disp:inst4
+input[0] => Mux0.IN19
+input[0] => Mux1.IN19
+input[0] => Mux2.IN19
+input[0] => Mux3.IN19
+input[0] => Mux4.IN19
+input[0] => Mux5.IN19
+input[0] => Mux6.IN19
+input[1] => Mux0.IN18
+input[1] => Mux1.IN18
+input[1] => Mux2.IN18
+input[1] => Mux3.IN18
+input[1] => Mux4.IN18
+input[1] => Mux5.IN18
+input[1] => Mux6.IN18
+input[2] => Mux0.IN17
+input[2] => Mux1.IN17
+input[2] => Mux2.IN17
+input[2] => Mux3.IN17
+input[2] => Mux4.IN17
+input[2] => Mux5.IN17
+input[2] => Mux6.IN17
+input[3] => Mux0.IN16
+input[3] => Mux1.IN16
+input[3] => Mux2.IN16
+input[3] => Mux3.IN16
+input[3] => Mux4.IN16
+input[3] => Mux5.IN16
+input[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

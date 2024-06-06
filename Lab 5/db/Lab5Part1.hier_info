@@ -1,0 +1,7 @@
+|Lab5Part1
+d => q.DATAA
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+q << q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

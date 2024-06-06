@@ -1,0 +1,66 @@
+radix symbolic
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
+
+force clk 0
+run 50
+
+force clk 1
+run 50
